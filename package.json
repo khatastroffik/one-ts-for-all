@@ -1,0 +1,92 @@
+{
+  "name": "@khatastroffik/one-ts-for-all",
+  "version": "1.0.0",
+  "description": "A PoC demonstrating a Typescript 'library' project with multiple targets (CJS, EMS, CLI...)",
+  "keywords": [
+    "TS",
+    "Typescript",
+    "ESM",
+    "ECMAScript",
+    "Module",
+    "CJS",
+    "CommonJS",
+    "CLI",
+    "bin",
+    "application",
+    "browser",
+    "script",
+    "node",
+    "nodejs",
+    "blueprint",
+    "POC",
+    "dojo",
+    "TSC",
+    "jest",
+    "multiple targets"
+  ],
+  "author": {
+    "name": "Loïs Bégué",
+    "url": "https://www.khatastroffik.net"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=13.x",
+    "npm": ">=6.x"
+  },
+  "main": "lib/ts/library.ts",
+  "types": "lib/ts/library.d.ts",
+  "module": "lib/esm/library.js",
+  "browser": "lib/esm/library.js",
+  "node": "lib/cjs/library.js",
+  "bin": {
+    "ts4all": "bin/application.js"
+  },
+  "files": [
+    "/lib",
+    "/bin"
+  ],
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "jest --watch --onlyChanged",
+    "test:prod": "jest --silent --all",
+    "coverage": "jest --all --coverage",
+
+    "start": "ts-node --project tsconfig.common.json src/application.ts -d",
+    "node": "node bin/application.js",
+
+    "watch": "tsc -p tsconfig.types.json --watch",
+    "build:bin": "tsc -p tsconfig.bin.json",
+    "build:cjs": "tsc -p tsconfig.cjs.json",
+    "build:esm": "tsc -p tsconfig.esm.json",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build": "npm run build:types && npm run build:bin && npm run build:cjs && npm run build:esm",
+    "prod": "npm run cleanup && npm run build && npm run copyts && npm run test:prod",
+    "checkpkg": "pkgfiles",
+    "prepublishOnly": "npm run prod",
+
+    "local:publish": "npm run produce && npm link",
+    "local:unpublish": "npm unlink && npm run cleanup:nodemodules && npm install",
+
+    "cleanup": "rimraf ./lib ./bin ./coverage",
+    "cleanup:nodemodules": "npx rimraf ./node_modules",
+    "copyts": "copyfiles -u 2 \"src/lib/**/*\" -e \"**/*.spec.ts\" lib/ts"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.11",
+    "copyfiles": "^2.3.0",
+    "jest": "^26.0.1",
+    "jest-extended": "^0.11.5",
+    "jest-mock-process": "^1.4.0",
+    "pkgfiles": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.1.0",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

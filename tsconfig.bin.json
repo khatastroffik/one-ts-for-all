@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.common.json",
+  "compilerOptions": {
+
+    /*
+     * (06/06/2020)
+     *
+     * DON'T REMOVE THE FOLLOWING COMMENT
+     * until the 'package.json' instruction
+     *   { 
+     *     ... 
+     *     "type": "module",
+     *     ...
+     *   } 
+     * is also supported by ts-node (ts-node is currently throwing when the package 'type' is set to 'module').
+     * Once supported by ts-node, set the package type as defined  above and also switch the tsconfig files to compile
+     * ESM module by default (Currently: ts-node -> tsconfig.cjs.json -> package.json is compiling CommonJS by default).
+     * 
+     */
+    // "module": "ES2020", 
+
+    "outDir": "./bin",
+    "declaration": false,
+  },
+  "include": ["src/**/*.ts"]
+}
