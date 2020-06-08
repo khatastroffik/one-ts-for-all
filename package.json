@@ -69,6 +69,7 @@
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:types": "tsc -p tsconfig.types.json",
     "build": "npm run build:types && npm run build:bin && npm run build:cjs && npm run build:esm",
+    "changelog": "npx generate-changelog",
     "prod": "npm run cleanup && npm run build && npm run copyts && npm run test:prod",
     "checkpkg": "pkgfiles",
     "prepublishOnly": "npm run prod",
