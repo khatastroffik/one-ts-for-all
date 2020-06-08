@@ -46,7 +46,8 @@
     "/bin"
   ],
   "directories": {
-    "doc": "doc"
+    "doc": "doc",
+    "example": "examples"
   },
   "scripts": {
     "test": "jest --watch --onlyChanged",
