@@ -28,6 +28,14 @@
     "name": "Loïs Bégué",
     "url": "https://www.khatastroffik.net"
   },
+  "repository": {
+    "url": "https://github.com/khatastroffik/one-ts-for-all.git",
+    "type": "git"
+  },
+  "bugs": {
+    "url": "https://github.com/khatastroffik/one-ts-for-all/issues"
+  },
+  "homepage": "https://www.khatastroffik.net",
   "license": "MIT",
   "engines": {
     "node": ">=13.x",
