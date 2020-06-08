@@ -37,5 +37,7 @@ note: uninstalling may break the package integrity (at least on windows os). In 
 
 ### Refs
 
-- see: [npm-link](https://docs.npmjs.com/cli/link)
-- see: [create a node cli package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
+- [Publishing Node modules with TypeScript and ES modules](https://blog.logrocket.com/publishing-node-modules-typescript-es-modules/)
+- [npm-link](https://docs.npmjs.com/cli/link)
+- [ES6 modules in depth](https://ponyfoo.com/articles/es6-modules-in-depth)
+- [create a node cli package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
