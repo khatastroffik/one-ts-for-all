@@ -1,5 +1,7 @@
 # Development settings
 
+back to [README][readme]
+
 ## JEST
 
 - [jest-Extended](https://github.com/jest-community/jest-extended)
@@ -41,3 +43,5 @@ note: uninstalling may break the package integrity (at least on windows os). In 
 - [npm-link](https://docs.npmjs.com/cli/link)
 - [ES6 modules in depth](https://ponyfoo.com/articles/es6-modules-in-depth)
 - [create a node cli package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
+
+[readme]: ../README.md
