@@ -1,0 +1,15 @@
+{
+  "description": "A sample Node.js application using the PoC library as an CommonJS module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": {
+    "name": "Loïs Bégué",
+    "url": "https://www.khatastroffik.net"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@khatastroffik/one-ts-for-all": "file:../../../one-ts-for-all"
+  }
+}
