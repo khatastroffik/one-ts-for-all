@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/styles.css">
+  <title>Sample Web Application</title>
+</head>
+
+<body>
+
+  <!-- ############## CONTENT ############## -->
+  
+  <h1>Sample Web Application</h1>
+  <p>This is a sample web application using/integrating the "one-typescript-for-all" library as an ECMAScript Module (ESM)</p>
+  <div id="webapp">
+    <h2>My Driving School :: Car Pool</h2>
+    <p><button onclick="updateTable(true)">Accelerate</button> <button onclick="updateTable(false)">Throttle</button></p>
+    <p id="target"></p>
+  </div>
+
+  <!-- ############## SCRIPTS ############## -->
+  <script type="module" charset="utf-8">
+
+    // Load the library
+    import { Car } from '/js/library.js';
+
+    // Load the web app script
+    import { CreateElementWithContent, randomSpeed } from '/js/script.js'
+
+    const cars = [];
+    var table = document.createElement('table');
+
+    function initCarPool() {
+      // create some cars
+      cars.push(new Car('Trabi', 95));
+      cars.push(new Car('2 CV', 75));
+      cars.push(new Car('Veron', 375));
+      // drive the cars i.e. start & accelerate
+      cars.forEach((car) => car.startEngine());
+    }
+
+    function initTable() {
+      // prepare table  
+      var header = document.createElement('tr');
+      header.appendChild(CreateElementWithContent('th', 'Name of the car'));
+      header.appendChild(CreateElementWithContent('th', 'Max. Speed'));
+      header.appendChild(CreateElementWithContent('th', 'Engine status'));
+      header.appendChild(CreateElementWithContent('th', 'Current Speed'));
+      header.childNodes.forEach(n => n.width = '25%');
+      table.appendChild(header);
+    }
+
+    function populateTable() {
+      // erase old rows if any
+      if (table.rows.length > 1) {
+        cars.forEach(() => table.deleteRow(-1)); // erase last row
+      }
+      // get status of the cars
+      cars.forEach((car) => {
+        let info = car.getStatus();
+        var row = table.insertRow();
+        row.appendChild(CreateElementWithContent('td', info.name));
+        row.appendChild(CreateElementWithContent('td', info.maxSpeed));
+        row.appendChild(CreateElementWithContent('td', info.engine));
+        row.appendChild(CreateElementWithContent('td', `${info.speed}${(info.speed === info.maxSpeed) ? ' MAX' : ''}`));
+        table.appendChild(row);
+      });
+    }
+
+    function appendTableRows() {
+      var target = document.getElementById('target');
+      if (target.childNodes[0]) {
+        target.replaceChild(table, target.childNodes[0]);
+      } else {
+        target.appendChild(table);
+      }
+
+    }
+
+    // update the table when reloading
+    document.updateTable = function (accelerate) {
+      cars.forEach((car) => {
+        if (accelerate) car.accelerate(randomSpeed(car))
+        else car.throttle(randomSpeed(car));
+      });
+      populateTable();
+      appendTableRows();
+    }
+
+    initCarPool();
+    initTable();
+    appendTableRows();
+  </script>
+
+  <script nomodule src="/js/fallback_when_ESM_modules_are_not_supported.js"></script>
+
+</body>
+
+</html>

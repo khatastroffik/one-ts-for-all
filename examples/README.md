@@ -37,4 +37,4 @@ goto ['Browser' Sample Project](./browser/README.md)
 
 [readme]: ../README.md
 [src]: ../src
-[npmp]: XXX
+[npmp]: https://www.npmjs.com/package/@khatastroffik/one-ts-for-all

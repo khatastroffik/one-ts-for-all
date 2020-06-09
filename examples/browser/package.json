@@ -1,0 +1,15 @@
+{
+  "description": "A sample web application using the PoC library as an ECMAScript module",  
+  "scripts": {
+    "start": "npx http-server -o",
+    "ts4all": "ts4all"
+  },
+  "author": {
+    "name": "Loïs Bégué",
+    "url": "https://www.khatastroffik.net"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@khatastroffik/one-ts-for-all": "file:../../../one-ts-for-all"
+  }
+}
