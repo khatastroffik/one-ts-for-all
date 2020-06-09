@@ -1,5 +1,7 @@
 # Browser Sample Project
 
+back to [Samples list][samples] - back to [main project page][mainpage]
+
 This example demonstrate the usage of the PoC/library as an **EcmaScript Module integrated in a web application**.
 
 ## setup
@@ -88,3 +90,6 @@ import { Car } from '@khatastroffik/one-ts-for-all/';
 ```
 
 depending of the configuration of your (client) project.
+
+[mainpage]: ../../README.md
+[samples]: ../README.md

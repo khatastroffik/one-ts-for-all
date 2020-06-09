@@ -1,14 +1,14 @@
 # Usage Examples
 
-back to [README][readme]
+back to [main project page][mainpage]
 
-The library implemented in the PoC (see [**src**](src) folder) and deployed as a [NPM package](npmp) can be used in different ways by any/multiple client projects (e.g. the provided sample projects).
+The library implemented in the PoC (see [**src**][src] folder) and deployed as a [NPM package][npmp] can be used in different ways by any/multiple client projects (e.g. the provided sample projects).
 
 ## Installation
 
 ### standard installation
 
-In most of the case, the client project needs to install the [NPM package](npmp) as a dependency.
+In most of the case, the client project needs to install the [NPM package][npmp] as a dependency.
 
 The *one-ts-for-all* should be integrated in the client project to augment its functionality, hence it should be installed as a *productive* dependency, hence:
 ```shell
@@ -35,6 +35,6 @@ goto ['Browser' Sample Project](./browser/README.md)
 ### Usage as Typescript module in a TS application
 
 
-[readme]: ../README.md
+[mainpage]: ../README.md
 [src]: ../src
 [npmp]: https://www.npmjs.com/package/@khatastroffik/one-ts-for-all
