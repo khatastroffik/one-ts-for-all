@@ -18,6 +18,8 @@ This use case is demonstrated in this PoC.
 
 Older browser would require to adapt the scripts before integration, using a supplemental "transpiler" to output compatible scripts - hence requiring a further implementation step. Such browsers aren't in the focus of this project. 
 
+![one-typescript-for-all Architecture](doc/one-ts-for-all.png)
+
 ## Requirements
 
 **Node.js** and **NPM** (or **yarn**) should be "globally" installed on your system to ease the installation of the packages and/or source files.
