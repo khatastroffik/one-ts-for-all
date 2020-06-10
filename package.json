@@ -73,7 +73,7 @@
     "prod": "npm run cleanup && npm run build && npm run copyts && npm run test:prod",
     "checkpkg": "pkgfiles",
     "prepublishOnly": "npm run prod",
-    "local:publish": "npm run produce && npm link",
+    "local:publish": "npm run prod && npm link",
     "local:unpublish": "npm unlink && npm run cleanup:nodemodules && npm install",
     "cleanup": "rimraf ./lib ./bin ./coverage",
     "cleanup:nodemodules": "npx rimraf ./node_modules",
