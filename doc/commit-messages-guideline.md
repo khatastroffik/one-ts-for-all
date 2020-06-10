@@ -1,6 +1,6 @@
 # Commit Messages Guideline
 
-back to [README][readme]
+back to [main project page][mainpage]
 
 <h2>Table-of-Content</h2>
 
@@ -26,7 +26,7 @@ back to [README][readme]
 Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
 format that includes a **type**, a **scope** and a **subject**:
 
-```console
+```html
 <type>(<scope>): <subject>
 <BLANK LINE>
 <body>
@@ -128,4 +128,4 @@ Similar guidlines and other references can be found in the following:
 [karma-git-commit]: http://karma-runner.github.io/3.0/dev/git-commit-msg.html
 [semantic-versioning]: https://semver.org/spec/v2.0.0.html
 [conventional-commits]: https://www.conventionalcommits.org
-[readme]: ../README.md
+[mainpage]: ../README.md

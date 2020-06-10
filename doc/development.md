@@ -1,6 +1,6 @@
 # Development settings
 
-back to [README][readme]
+back to [main project page][mainpage]
 
 ## JEST
 
@@ -23,25 +23,25 @@ Locally install the package (using a symlink!).
 
 To bind the package in the **local npm repository** i.e. to make the libraries and the CLI available globaly on the local dev machine, one can **link** the package:
 
-```
-npm run dev:publish
+```shell
+> npm run dev:publish
 ```
 
 ### uninstall/unlink
 
 To uninstall the locally deployed package i.e. to **unlink** the package from the **local npm repository**, one can use:
 
-```
-npm run dev:unpublish
+```shell
+> npm run dev:unpublish
 ```
 
 note: uninstalling may break the package integrity (at least on windows os). In this case, the "node_modules" and "package.lock.json" need to be re-created. This is implemented in the "dev:unpublish" script.
 
-### Refs
+### References
 
 - [Publishing Node modules with TypeScript and ES modules](https://blog.logrocket.com/publishing-node-modules-typescript-es-modules/)
 - [npm-link](https://docs.npmjs.com/cli/link)
 - [ES6 modules in depth](https://ponyfoo.com/articles/es6-modules-in-depth)
 - [create a node cli package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
 
-[readme]: ../README.md
+[mainpage]: ../README.md

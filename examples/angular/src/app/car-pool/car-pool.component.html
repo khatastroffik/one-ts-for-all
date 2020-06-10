@@ -1,0 +1,26 @@
+<div id="webapp">
+  <h2>My Driving School :: Car Pool</h2>
+  <p><button (click)="accelerate()">Accelerate</button> <button (click)="throttle()">Throttle</button></p>
+
+  <table>
+    <tr>
+      <th>Name of the car</th>
+      <th>Max Speed</th>
+      <th>Engine state</th>
+      <th>Current speed</th>
+    </tr>
+
+    <ng-container *ngFor="let car of cars; let ii=index">
+      <tr>
+        <ng-container *ngIf="car.getStatus() as info">
+          <td>{{car.name}}</td>
+          <td>{{info.maxSpeed}}</td>
+          <td>{{info.engine}}</td>
+          <td>{{info.speed}}<span *ngIf="info.speed >=info.maxSpeed"> MAX</span></td>
+        </ng-container>
+      </tr>
+    </ng-container>
+
+  </table>
+
+</div>

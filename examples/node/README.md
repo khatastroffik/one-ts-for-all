@@ -23,7 +23,7 @@ or
 
 > node .
 
-or 
+or
 
 > npx .
 
@@ -45,6 +45,7 @@ const one4all = require('@khatastroffik/one-ts-for-all/lib/cjs/library');
 
 const Car = require('@khatastroffik/one-ts-for-all/lib/cjs/library').Car;
 ```
+
 The path used above is targeting the specific sub-directory containing the cjs library (without the ".js" extension, though).
 
 This path is required du to the *configuration of the library*: the **library `package.json`** is defining the **main entrypoint** to be the **Typescript version**:
@@ -60,6 +61,7 @@ This path is required du to the *configuration of the library*: the **library `p
 ```
 
 If the library would define `main` to point to the CJS version instead (i.e. `"main": "lib/cjs/library.js"`), then the binding would be:
+
 ```javascript
 const one4all = require('@khatastroffik/one-ts-for-all/');
 ```
@@ -71,9 +73,9 @@ Hence, a client application always have to *take the configuration of the used l
 The `package.json` of this example is binding the library (as a dependency) directly from the local package:
 
 ```json
-  "dependencies": {
-    "@khatastroffik/one-ts-for-all": "file:../../../one-ts-for-all"
-  }
+"dependencies": {
+  "@khatastroffik/one-ts-for-all": "file:../../../one-ts-for-all"
+}
 ```
 
 This can be usefull to test locally, that the library integration is working as expected.

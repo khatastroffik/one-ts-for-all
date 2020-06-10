@@ -4,20 +4,41 @@ back to [Samples list][samples] - back to [main project page][mainpage]
 
 This example demonstrate the usage of the PoC/library as an **EcmaScript Module integrated in a web application**.
 
+<h2>Table-of-Content</h2>
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=3 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [setup](#setup)
+- [start](#start)
+  - [run the web app](#run-the-web-app)
+  - [run the CLI application](#run-the-cli-application)
+- [package &amp; binding](#package-amp-binding)
+- [Importing the library in a (client) script](#importing-the-library-in-a-client-script)
+  - [direct import](#direct-import)
+  - [import from the library package](#import-from-the-library-package)
+
+<!-- /code_chunk_output -->
+
 ## setup
 
 To setup this sample application, please do in the folder containing this example i.e. the `package.json` file:
+
 ```shell
 > npm install
 ```
+
 This will bind the library in the browser app project... see the "package &amp; binding" section below.
 
 ## start
 
 ### run the web app
+
 To start the web application, do:
+
 ```shell
-> npm start 
+> npm start
 ```
 
 This will start a (provisory) web server and open your default browser to display the web application. The web server is not suitable for production, though.
@@ -25,16 +46,19 @@ This will start a (provisory) web server and open your default browser to displa
 ### run the CLI application
 
 After the library package has been installed (see "setup" above), you can execute the CLI application with:
+
 ```shell
 > npx ts4all
 
-or 
+or
 
 > npm run ts4all
 ```
+
 This will pick the `ts4all` executable directly from the `node_modules/.bin/` folder and execute...
 
 **Note**: If the library package is *installed globally* instead of *locally*, the CLI is available from any command line on the system:
+
 ```shell
 ts4all
 ```
@@ -48,6 +72,7 @@ The package.json of this example is binding the library (as a dependency) direct
     "@khatastroffik/one-ts-for-all": "file:../../../one-ts-for-all"
   }
 ```
+
 This can be usefull to test locally, that the library integration is working as expected.
 
 In a real project context, you'd better bind the library from a repository:
@@ -82,7 +107,9 @@ The *bundler* or *framework* will operate the appropriate convertion/linkage i.e
 import { Car } from '@khatastroffik/one-ts-for-all/lib/esm/library.js';
 ...
 ```
+
 or
+
 ```javascript
 ...
 import { Car } from '@khatastroffik/one-ts-for-all/';
