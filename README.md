@@ -108,7 +108,7 @@ Those scripts can be executed using:
 
 The most important npm scripts of the project are described below:
 
-```json
+```jsonc
 {
   "scripts": {
 
@@ -169,7 +169,7 @@ Once the artifacts are produced and published, a client project intending to use
 
 this automatic lookup is using the following **fields** (if available) as defined in the `package.sjon` file:
 
-```json
+```jsonc
 {
   // This define the DEFAULT artifact of the package. Here: the TYPESCRIPT version
   "main": "lib/ts/library.ts",
