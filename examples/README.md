@@ -27,11 +27,11 @@ See the list of **provided example applications** below.
 
 - **Node** Preview:  
 ![node preview](../doc/preview-node.png)
-- **CLI** Preview:
+- **CLI** Preview:  
 ![node preview](../doc/preview-CLI.png)
-- **Browser** Preview:
+- **Browser** Preview:  
 ![node preview](../doc/preview-browser.png)
-- **Angular** Preview:
+- **Angular** Preview:  
 ![node preview](../doc/preview-angular.png)
 
 ## Installation
