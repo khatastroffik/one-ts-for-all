@@ -37,7 +37,25 @@ To uninstall the locally deployed package i.e. to **unlink** the package from th
 
 note: uninstalling may break the package integrity (at least on windows os). In this case, the "node_modules" and "package.lock.json" need to be re-created. This is implemented in the "dev:unpublish" script.
 
-### References
+## Addendum
+
+The npm script "**copyts**" (in the root `package.json`) may cause some problem, depending on the paths used in the project (e.g. when paths are containing space charcters). In this case, the paths should be put in double quotes, like:
+
+```json
+{
+  "copyts": "copyfiles -u 2 \"src/lib/**/*\" -e \"**/*.spec.ts\" lib/ts"
+}
+```
+
+instead of the simple
+
+```json
+{
+  "copyts": "copyfiles -u 2 src/lib/**/* -e **/*.spec.ts lib/ts"
+}
+```
+
+## References
 
 - [Publishing Node modules with TypeScript and ES modules](https://blog.logrocket.com/publishing-node-modules-typescript-es-modules/)
 - [npm-link](https://docs.npmjs.com/cli/link)

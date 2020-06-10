@@ -77,7 +77,7 @@
     "local:unpublish": "npm unlink && npm run cleanup:nodemodules && npm install",
     "cleanup": "rimraf ./lib ./bin ./coverage",
     "cleanup:nodemodules": "npx rimraf ./node_modules",
-    "copyts": "copyfiles -u 2 \"src/lib/**/*\" -e \"**/*.spec.ts\" lib/ts"
+    "copyts": "copyfiles -u 2 src/lib/**/* -e **/*.spec.ts lib/ts"
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",

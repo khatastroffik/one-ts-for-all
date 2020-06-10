@@ -12,6 +12,7 @@ See the list of **provided example applications** below.
 
 <!-- code_chunk_output -->
 
+- [Screenshots](#screenshots)
 - [Installation](#installation)
   - [standard installation](#standard-installation)
   - [alternative installation](#alternative-installation)
@@ -21,6 +22,17 @@ See the list of **provided example applications** below.
   - [Usage as Typescript module in an Angular (Typescript) application](#usage-as-utypescriptu-module-in-an-angular-typescript-application)
 
 <!-- /code_chunk_output -->
+
+## Screenshots
+
+- **Node** Preview:  
+![node preview](../doc/preview-node.png)
+- **CLI** Preview:
+![node preview](../doc/preview-CLI.png)
+- **Browser** Preview:
+![node preview](../doc/preview-browser.png)
+- **Angular** Preview:
+![node preview](../doc/preview-angular.png)
 
 ## Installation
 
