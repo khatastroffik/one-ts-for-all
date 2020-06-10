@@ -1,8 +1,29 @@
-# Commit Messages Guideline
+# Commit Messages Guideline {ignore=true}
 
 back to [README][readme]
 
-### Commit Message Format
+## Table-of-Content {ignore=true}
+
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Commit Message Format](#commit-message-format)
+  - [Type](#type)
+  - [Scope](#scope)
+  - [Subject](#subject)
+  - [Body](#body)
+  - [Footer](#footer)
+- [Addendum](#addendum)
+  - [Reverting a commit](#reverting-a-commit)
+  - [Impact of the commit types on the versioning](#impact-of-the-commit-types-on-the-versioning)
+  - [Further reading](#further-reading)
+
+<!-- /code_chunk_output -->
+
+
+## Commit Message Format
 Each commit message consists of a **header**, a **body** and a **footer**.  The header has a special
 format that includes a **type**, a **scope** and a **subject**:
 
@@ -69,7 +90,9 @@ reference GitHub issues that this commit **Closes**.
 
 **Breaking Changes** should start with the word `BREAKING CHANGE:` with a space or two newlines. The rest of the commit message is then used for this.
 
-### Revert
+## Addendum
+
+### Reverting a commit
 If the commit reverts a previous commit, it should begin with `revert: `, followed by the header of the reverted commit. In the body it should say: `This reverts commit <hash>.`, where the hash is the SHA of the commit being reverted.
 
 ### Impact of the commit types on the versioning
